@@ -4,9 +4,9 @@ describe("Newsletter subscribe form", ()=>{
     })
 
     it("allows the user to subscribe to the email list", ()=>{
-        cy.getByData("email-input").type('Jidraph@gmail.com')
+        cy.getByData("email-input").type('Jidrap@gmail.com')
         cy.getByData("submit-button").click()
-        cy.getByData("success-message").should("exist").contains('Success: Jidraph@gmail.com')
+        cy.getByData("success-message").should("exist").contains('Success: Jidrap@gmail.com')
     })
     it("should Not allow an invalid email address", ()=>{
         cy.getByData("email-input").type('Jidraph.com')
